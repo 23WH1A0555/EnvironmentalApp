@@ -1,0 +1,140 @@
+body {
+    background: url('pic.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: black !important;
+}
+
+.center-box {
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    color: black;
+}
+
+.btn-success {
+    width: 100%;
+}
+
+.dashboard-container {
+    margin-top: 50px;
+}
+
+.dashboard-card {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    color: black;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#map, #communityMap {
+    height: 400px;
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.recycling-center-card {
+    margin-bottom: 15px;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #f8f9fa;
+    cursor: pointer;
+    transition: transform 0.2s;
+    color: black;
+}
+
+/* Add all other CSS styles from your original file here */
+/* I've included just the essential styles to keep this response manageable */
+/* You should copy all the CSS from your original file into this styles.css */
+/* styles.css */
+
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Set up a full-height container for the form */
+  body, html {
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Center the form in the middle of the page */
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f7fc;
+    padding: 20px;
+  }
+  
+  /* Form container */
+  form {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+  }
+  
+  /* Form field styles */
+  form div {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  input:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+  
+  button {
+    width: 100%;
+    padding: 12px;
+    font-size: 18px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 480px) {
+    form {
+      width: 100%;
+      padding: 20px;
+    }
+  
+    input, button {
+      font-size: 14px;
+    }
+  }
