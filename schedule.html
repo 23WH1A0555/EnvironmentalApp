@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedule Pickup | Waste Management App</title>
+    <!-- CSS links -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="center-box" id="pickupFormContainer">
+            <h2>Schedule a Waste Pickup</h2>
+            <form id="pickupForm">
+                <div class="mb-3">
+                    <label class="form-label">Pickup Date</label>
+                    <input type="date" class="form-control" id="pickupDate" required>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Pickup Time</label>
+                    <input type="time" class="form-control" id="pickupTime" required>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Waste Type</label>
+                    <select class="form-control" id="wasteType" required>
+                        <option value="">Select waste type</option>
+                        <option>Plastic</option>
+                        <option>Metal</option>
+                        <option>Paper</option>
+                        <option>Organic</option>
+                        <option>Glass</option>
+                        <option>Electronics</option>
+                        <option>Other</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Amount (kg)</label>
+                    <input type="number" class="form-control" id="wasteAmount" min="1" required>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Special Instructions</label>
+                    <textarea class="form-control" id="specialInstructions" rows="2"></textarea>
+                </div>
+                <button type="submit" class="btn btn-success">Schedule Pickup</button>
+                <a href="dashboard.html" class="btn btn-outline-success mt-3">Back to Dashboard</a>
+            </form>
+        </div>
+
+        <!-- Scheduled Pickup Details -->
+        <div class="center-box" id="pickupDetailsContainer" style="display: none;">
+            <h2>Your Scheduled Pickup</h2>
+            <p><strong>Date:</strong> <span id="pickupDateDisplay"></span></p>
+            <p><strong>Time:</strong> <span id="pickupTimeDisplay"></span></p>
+            <p><strong>Waste Type:</strong> <span id="wasteTypeDisplay"></span></p>
+            <p><strong>Amount (kg):</strong> <span id="wasteAmountDisplay"></span></p>
+            <p><strong>Special Instructions:</strong> <span id="specialInstructionsDisplay"></span></p>
+            <a href="dashboard.html" class="btn btn-success">Back to Dashboard</a>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Handle form submission
+        document.getElementById("pickupForm").addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            // Get the values from the form
+            const pickupDate = document.getElementById("pickupDate").value;
+            const pickupTime = document.getElementById("pickupTime").value;
+            const wasteType = document.getElementById("wasteType").value;
+            const wasteAmount = document.getElementById("wasteAmount").value;
+            const specialInstructions = document.getElementById("specialInstructions").value;
+
+            // Validate form fields
+            if (!pickupDate || !pickupTime || !wasteType || !wasteAmount) {
+                alert("Please fill in all the required fields.");
+                return;
+            }
+
+            // Hide the form and show the scheduled details
+            document.getElementById("pickupFormContainer").style.display = "none";
+            document.getElementById("pickupDetailsContainer").style.display = "block";
+
+            // Display the entered details in the confirmation container
+            document.getElementById("pickupDateDisplay").textContent = pickupDate;
+            document.getElementById("pickupTimeDisplay").textContent = pickupTime;
+            document.getElementById("wasteTypeDisplay").textContent = wasteType;
+            document.getElementById("wasteAmountDisplay").textContent = wasteAmount + " kg";
+            document.getElementById("specialInstructionsDisplay").textContent = specialInstructions || "None";
+        });
+    </script>
+</body>
+</html>
