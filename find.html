@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Find Centers | Waste Management App</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"/>
+
+  <style>
+    body {
+      background: url('pic.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+    }
+
+    .center-box {
+      max-width: 800px;
+      margin: auto;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      color: black;
+    }
+
+    .center-card {
+      margin-bottom: 15px;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .map-placeholder {
+      height: 300px;
+      width: 100%;
+      background-color: #ccc;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .map-placeholder img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container mt-5">
+    <div class="center-box">
+      <h2 class="text-center mb-4">Nearby Recycling Centers</h2>
+
+      <div class="mb-4">
+        <label for="location" class="form-label">Enter your location:</label>
+        <div class="input-group">
+          <input type="text" class="form-control" id="location" placeholder="e.g., 123 Main St, City">
+          <button class="btn btn-success">Search</button>
+        </div>
+      </div>
+
+      <!-- MAP PLACEHOLDER IMAGE -->
+      <div class="map-placeholder">
+        <img src="map.png" alt="Map">
+      </div>
+
+      <h4 class="mb-3">Recycling Centers Near You</h4>
+
+      <div class="card center-card">
+        <div class="card-body">
+          <h5 class="card-title">Green Earth Recycling</h5>
+          <p class="card-text">
+            📍 123 Eco Drive, Green City<br>
+            📞 (555) 123-4567<br>
+            ⏰ Mon-Fri: 8AM-6PM, Sat: 9AM-4PM<br>
+            <span class="badge bg-success">Accepts: Plastic, Paper, Metal</span>
+          </p>
+          <button class="btn btn-sm btn-outline-success">Directions</button>
+        </div>
+      </div>
+
+      <div class="card center-card">
+        <div class="card-body">
+          <h5 class="card-title">Community Recycling Hub</h5>
+          <p class="card-text">
+            📍 456 Sustainability Ave, Eco Town<br>
+            📞 (555) 987-6543<br>
+            ⏰ Mon-Sun: 7AM-7PM<br>
+            <span class="badge bg-success">Accepts: All recyclables</span>
+          </p>
+          <button class="btn btn-sm btn-outline-success">Directions</button>
+        </div>
+      </div>
+
+      <div class="card center-card">
+        <div class="card-body">
+          <h5 class="card-title">Eco-Friendly Waste Center</h5>
+          <p class="card-text">
+            📍 789 Green Blvd, Environment City<br>
+            📞 (555) 456-7890<br>
+            ⏰ Tue-Sat: 9AM-5PM<br>
+            <span class="badge bg-success">Accepts: Electronics, Hazardous</span>
+          </p>
+          <button class="btn btn-sm btn-outline-success">Directions</button>
+        </div>
+      </div>
+
+      <div class="text-center mt-4">
+        <button class="btn btn-outline-success" onclick="window.location.href='dashboard.html'">Back to Dashboard</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
